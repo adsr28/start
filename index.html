@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Start "
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
+
+<!-- Auto Reload Page -->
+<script>
+	document.addEventListener("visibilitychange", function() {
+		if (document.hidden){
+			console.log("Browser tab is hidden")
+		} else {
+			console.log("Browser tab is visible")
+			location.reload();
+		}
+	});
+	</script>
